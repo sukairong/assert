@@ -26,12 +26,29 @@
                     <div class="rich_media_content " id="js_content">
                         <ul class="list-paddingleft-2">
 						
-							<li><h3 style="padding-left: 16px; font-size: 14pt; background: url(./stylesheets/arrow.jpg) 0% 50% no-repeat;" class="">JDBC连接池、监控组件&nbsp;<span style="color: rgb(0, 102, 0);">Druid</span></h3><table width="100%"><tbody><tr><td style="padding: 0px;"><p class="" style="margin-top: 5px; margin-bottom: 5px; margin-left: 15px; color: rgb(102, 102, 102); font-size: 9pt; line-height: 20px;">Druid是一个JDBC组件，它包括三部分：&nbsp; DruidDriver 代理Driver，能够提供基于Filter－Chain模式的插件体系。&nbsp; DruidDataSource 高效可管理的数据库连接池。&nbsp; SQLParser&nbsp; Druid可以做什么？&nbsp; 1) 可以监控数据库访问性能，Druid内置提供了一个功能强大...</p>
+							<li><h3 style="padding-left: 16px; font-size: 14pt; background: url(./stylesheets/arrow.jpg) 0% 50% no-repeat;" class=""><span style="color: rgb(0, 102, 0);">image retrieval in hybris</span></h3><table width="100%"><tbody><tr><td style="padding: 0px;"><p class="" style="margin-top: 5px; margin-bottom: 5px; margin-left: 15px; color: rgb(102, 102, 102); font-size: 9pt; line-height: 20px;">image retrieval 图像识别检索/相似图像搜索
+							，基本原理为采用算法识别图像特征，并与待检索图片特性进行比较，差异小为相似图片。Image retreval integrate with hybris solution以感知哈希算法为基础在hybris中进行图片指纹计算和
+							指纹差异比较整合，获取图片相似度较高产品信息
+
+</p>
 							<p class="" style="margin-top: 5px; margin-bottom: 5px; margin-left: 15px; color: rgb(102, 102, 102); font-size: 9pt; line-height: 20px;">
-							<img src="./stylesheets/test.png" style="border: 0px; max-width: 630px; width: auto !important; visibility: visible !important; height: auto !important;" class="" data-type="png" data-ratio="0.322" data-w="630">
+							<img src="./stylesheets/image_retrival_flow.png" style="border: 0px; max-width: 630px; width: auto !important; visibility: visible !important; height: auto !important;" class="" data-type="png" data-ratio="0.322" data-w="630">
 							</p>
 							<p class="" style="margin-top: 5px; margin-bottom: 5px; margin-left: 15px; color: rgb(102, 102, 102); font-size: 9pt; line-height: 20px;">
-							更多Druid信息</p></td></tr></tbody></table><p class="" style="margin-top: 10px; margin-bottom: 5px;"><strong style="color: rgb(102, 102, 102);">最近更新：</strong>&nbsp;阿里开源数据连接池发布 1.0.18 版本&nbsp;发布于 2个月前</p></li>
+							Key points：
+							1 cronjob定时获取所有online产品图片，计算图片指纹，存入缓存
+
+							2 一张图片生成指纹为200ms左右，采用多线程处理，大大缩减更新图片指纹库所需要的时间
+							
+							3 图片检索时，将待检索图片的指纹与图片指纹库中的指纹对比，差异小为相似图片
+							
+							4 单张图片指纹对比<1ms，遍历检索对比图片无性能问题
+</p>
+							<p class="" style="margin-top: 5px; margin-bottom: 5px; margin-left: 15px; color: rgb(102, 102, 102); font-size: 9pt; line-height: 20px;">
+							<img src="./stylesheets/image_retrival_demo.png" style="border: 0px; max-width: 630px; width: auto !important; visibility: visible !important; height: auto !important;" class="" data-type="png" data-ratio="0.322" data-w="630">
+							</p>
+							
+							</td></tr></tbody></table><p class="" style="margin-top: 10px; margin-bottom: 5px;"><strong style="color: rgb(102, 102, 102);">最近更新：</strong>&nbsp;阿里开源数据连接池发布 1.0.18 版本&nbsp;发布于 2个月前</p></li>
 							
 							
 							
