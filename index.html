@@ -43,7 +43,24 @@
 							<p class="" style="align:center;margin-top: 5px; margin-bottom: 5px; margin-left: 15px; color: rgb(102, 102, 102); font-size: 9pt; line-height: 20px;">
 							<img src="./stylesheets/image_retrival_demo.png" style="border: 0px; max-width: 630px; width: auto !important; visibility: visible !important; height: auto !important;" class="" data-type="png" data-ratio="0.322" data-w="630">
 							</p>
-							</td></tr></tbody></table><p class="" style="margin-top: 10px; margin-bottom: 5px;"><strong style="color: rgb(102, 102, 102);">contributor：</strong>kairong,james,wangmeng</p></li>
+							</td></tr></tbody></table><p class="" style="margin-top: 10px; margin-bottom: 5px;"><strong style="color: rgb(102, 102, 102);">contributor：</strong>kairong,james,wangmeng</p>
+							</li>
+							
+							<li><h3 style="padding-left: 16px; font-size: 14pt; background: url(./stylesheets/arrow.jpg) 0% 50% no-repeat;" class=""><span style="color: rgb(0, 102, 0);">base on oneproxy table sharding in hybris</span></h3><table width="100%"><tbody><tr><td style="padding: 0px;"><p class="" style="margin-top: 5px; margin-bottom: 5px; margin-left: 15px; color: rgb(102, 102, 102); font-size: 9pt; line-height: 20px;">hybris使用OneProxy实现单库分表方案：使用OneProxy作为数据库中间件，对订单表（orders和orderentries）实现单数据库分表。本文档对该方案作测试验证，包括内容：分表配置、方案可用性验证、分表扩展验证、分表性能验证。
+							</p>
+							<p class="" style="align:center;margin-top: 5px; margin-bottom: 5px; margin-left: 15px; color: rgb(102, 102, 102); font-size: 9pt; line-height: 20px;">
+							<img src="./stylesheets/table_sharding_art.png" style="border: 0px; max-width: 630px; width: auto !important; visibility: visible !important; height: auto !important;" class="" data-type="png" data-ratio="0.322" data-w="630">
+							</p>
+							<p class="" style="margin-top: 5px; margin-bottom: 5px; margin-left: 15px; color: rgb(102, 102, 102); font-size: 9pt; line-height: 20px;">
+							分表配置：
+							* OneProxy配置。启动参数配置。OneProxy启动采用master-only模式，并设置分表参数
+							* 分表配置。依据pk按hash分表配置
+							* hybris配置。仅需修改jdbc配置参数为oneproxy的地址
+							可用性验证：包括initialize、update、startup、sharding extends
+							</p>
+							</td></tr></tbody></table><p class="" style="margin-top: 10px; margin-bottom: 5px;"><strong style="color: rgb(102, 102, 102);">contributor：</strong>kairong,james,pansen,micheal,haiyang</p>
+							</li>
+							
 							</ul><p><br></p>
                     </div>
 
